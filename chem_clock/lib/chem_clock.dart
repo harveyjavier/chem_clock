@@ -83,7 +83,8 @@ class _ChemClockState extends State<ChemClock> {
   }
 
   void _fetchData() async {
-    String e = await DefaultAssetBundle.of(context).loadString("assets/json/elements.json");
+    String e = await DefaultAssetBundle.of(context)
+        .loadString("assets/json/elements.json");
     setState(() {
       _elements = json.decode(e);
     });
